@@ -1,12 +1,8 @@
-﻿using ApplicationCore;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Infrastructure;
-using LanguageExt;
 using Xunit;
 
-using static LanguageExt.Prelude;
-
-namespace UnitTests
+namespace IntegrationTests
 {
     public class CryptoServiceTest
     {
@@ -14,7 +10,9 @@ namespace UnitTests
         [Fact]
         public void GetCurrentValueForAda()
         {
-            var cryptoService = new CryptoService();
+
+            var dataProvider = new TestCryptoDataProvider();
+            var cryptoService = new CryptoService(dataProvider);
             var adaCoin = cryptoService.Get("ADA");
 
             adaCoin.IsSome.Should().BeTrue();

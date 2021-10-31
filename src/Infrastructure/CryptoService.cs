@@ -7,9 +7,16 @@ namespace Infrastructure
 {
     public class CryptoService : ICryptoService
     {
-        public Option<CryptoCoin> Get(string ada) => ada.ToUpper() switch
+        private readonly ICryptoDataProvider _dataProvider;
+
+        public CryptoService(ICryptoDataProvider dataProvider)
         {
-            "ADA" => new CryptoCoin("ADA", 1.97),
+            _dataProvider = dataProvider;
+        }
+
+        public Option<CryptoCoin> Get(string cryptoId) => cryptoId.ToUpper() switch
+        {
+            "ADA" => _dataProvider.Get(cryptoId),
             _ => None
         };
     }

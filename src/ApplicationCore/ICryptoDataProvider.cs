@@ -2,7 +2,7 @@
 
 namespace ApplicationCore
 {
-    public interface ICryptoService
+    public interface ICryptoDataProvider
     {
         Option<CryptoCoin> Get(string cryptoId);
     }
