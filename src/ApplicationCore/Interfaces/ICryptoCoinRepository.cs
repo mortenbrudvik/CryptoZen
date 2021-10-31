@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using LanguageExt;
 
 namespace ApplicationCore.Interfaces
 {
     public interface ICryptoCoinRepository
     {
-        IEnumerable<CryptoCoin> GetAll();
+        Option<CryptoCoin> Get(string symbol);
     }
 }

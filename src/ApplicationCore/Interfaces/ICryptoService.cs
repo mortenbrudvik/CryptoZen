@@ -4,6 +4,6 @@ namespace ApplicationCore.Interfaces
 {
     public interface ICryptoService
     {
-        Option<CryptoCoin> Get(string cryptoId);
+        Option<CryptoCoin> Get(string symbol);
     }
 }

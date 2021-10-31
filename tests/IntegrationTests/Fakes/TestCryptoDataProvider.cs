@@ -11,7 +11,7 @@ namespace IntegrationTests.Fakes
             var jsonData = File.ReadAllText(@"test-data\\market-data.json");
             var marketData = parser.Parse(jsonData);
             foreach (var coin in marketData.CoinData)
-                _coins.Add(coin);
+                Coins.Add(coin);
         }
     }
 }

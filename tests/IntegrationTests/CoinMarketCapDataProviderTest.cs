@@ -17,7 +17,8 @@ namespace IntegrationTests
             coin.IsSome.Should().BeTrue();
             coin.IfSome(c =>
             {
-                c.Name.Should().Equals("Cardano");
+                c.Name.Should().Be("Cardano");
+                c.Symbol.Should().Be("ADA");
             });
         }
     }
