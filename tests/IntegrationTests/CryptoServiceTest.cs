@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using Infrastructure;
+using IntegrationTests.Fakes;
 using Xunit;
 
 namespace IntegrationTests

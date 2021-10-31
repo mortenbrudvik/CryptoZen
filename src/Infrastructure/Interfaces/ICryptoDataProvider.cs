@@ -1,6 +1,7 @@
-﻿using LanguageExt;
+﻿using ApplicationCore;
+using LanguageExt;
 
-namespace ApplicationCore
+namespace Infrastructure.Interfaces
 {
     public interface ICryptoDataProvider
     {

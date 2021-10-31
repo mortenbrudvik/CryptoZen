@@ -1,6 +1,6 @@
 ﻿using LanguageExt;
 
-namespace ApplicationCore
+namespace ApplicationCore.Interfaces
 {
     public interface ICryptoService
     {
