@@ -9,8 +9,8 @@ namespace IntegrationTests.Fakes
         {
             var parser = new CoinMarketCapParser();
             var jsonData = File.ReadAllText(@"test-data\\market-data.json");
-            var marketData = parser.Parse(jsonData);
-            foreach (var coin in marketData.CoinData)
+            var coins = parser.Parse(jsonData);
+            foreach (var coin in coins)
                 Coins.Add(coin);
         }
     }

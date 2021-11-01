@@ -1,6 +1,5 @@
 ﻿using ApplicationCore;
 using FluentAssertions;
-using Infrastructure;
 using Infrastructure.DataProvider;
 using IntegrationTests.Fakes;
 using Xunit;
@@ -13,7 +12,6 @@ namespace IntegrationTests
         [Fact]
         public void GetCurrentValueForAda()
         {
-
             var dataProvider = new TestCryptoDataProvider();
             dataProvider.Load();
             var cryptoRepository = new CryptoCoinRepository(dataProvider);

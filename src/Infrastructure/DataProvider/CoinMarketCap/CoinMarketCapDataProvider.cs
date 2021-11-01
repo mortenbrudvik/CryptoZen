@@ -18,7 +18,7 @@ namespace Infrastructure.DataProvider.CoinMarketCap
         {
             var coin = Coins.SingleOrDefault(x => x.Symbol == symbol);
             if (coin != null)
-                return new CryptoCoin(coin.Symbol, coin.Name, 1.0);
+                return new CryptoCoin(coin.Symbol, coin.Name, coin.Value);
 
             return None;
         }
